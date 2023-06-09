@@ -20,13 +20,17 @@ getMovies(API_URL);
 async function getMovies(url){
     var resp = await fetch(url);
     var res=await resp.json();
-   //  console.log(res);
+     console.log(res);
     showMovies(res.results);
 }
 
 
 function showMovies(data){
         container.innerHTML=``;
+        if(data.length==0){
+         container.innerHTML = `<div ><h1>OOPS - ERROR : 404  </h2>
+         <p style="font size : 1.9em;">The searched movie cannot be found please enter a valid movie name.</p></div>`
+        }else{
      data.forEach(movie => {
         const {title , poster_path,genre_ids,overview} = movie;
         let id1;
@@ -55,6 +59,7 @@ function showMovies(data){
             `  
         }
     });
+   }
 }
 
 //You can either press the enter key or click on the search icon to perform search action
