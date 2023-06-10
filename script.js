@@ -3,7 +3,7 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
-
+const googleSearch = 'https://www.google.com/search?q='
 
 
 const genres = {28:"Action",12:"Adventure",16:"Animation",35:"Comedy",80:"Crime",99:"Documentary",18:"Drama",10751:"Family",14:"Fantasy",
@@ -42,7 +42,7 @@ function showMovies(data){
         if(poster_path!=null){
         container.innerHTML+=
                `<div class="movie-item"> 
-                    <a href="#">
+                    <a href="${googleSearch+title}">
                         <img src="${IMG_URL+poster_path}" alt="image">
                         <div class = "rating">
                         <i class="material-icons" style="color : white ;background : transparent; font-size: 2.2vmin;">star</i>

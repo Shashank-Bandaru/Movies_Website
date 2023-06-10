@@ -274,6 +274,7 @@ input::placeholder{
 .movie-item .overview{
   position: absolute;
   left : 0;
+  color: rgb(180, 10, 180);
   right : 0;
   bottom: -10px;
   background-color: #fff;
