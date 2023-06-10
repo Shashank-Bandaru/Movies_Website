@@ -42,7 +42,7 @@ function showMovies(data){
         if(poster_path!=null){
         container.innerHTML+=
                `<div class="movie-item"> 
-                    <a href="${googleSearch+title}">
+                    <a href="${googleSearch+title}" target="blank">
                         <img src="${IMG_URL+poster_path}" alt="image">
                         <div class = "rating">
                         <i class="material-icons" style="color : white ;background : transparent; font-size: 2.2vmin;">star</i>
