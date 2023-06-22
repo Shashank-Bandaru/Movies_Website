@@ -5,7 +5,8 @@
         <meta name = "description" content="This is a movie's website">
         <meta name = "author" content="Shashank">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
         <link rel = "stylesheet" href = "styles.css">
         <title>Movies Website</title>
         <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/JhTJbrhY/movie-icon.png">
@@ -14,9 +15,21 @@
         <div class="top_bar">
             <div class="logo">
                 <ul>
-                    <li class="logo_img"><img src="https://i.postimg.cc/gjNHNHGS/movie22.jpg" height="32px"></li>
+                    <li class="logo_img" ><img src="https://i.postimg.cc/gjNHNHGS/movie22.jpg" height="32px"></li>
                     <li><b>Movies</b></li>
                 </ul>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round">
+                      <span class="toggle-icons">
+                        <i class="material-icons yellow">wb_sunny</i>
+                        <i class="material-icons gray">nights_stay</i>
+                      </span>
+                    </span>
+                  </label>
+                  
             </div>   
             <div id="form">
                 <button id="submission">Search</button> 
@@ -39,7 +52,7 @@
                 <p>ADD</p>
             </div>
         </div>
-        <div id="container">
+        <div id="container" class="container_n">
         </div>  
         <script src="script.js">
         </script>    

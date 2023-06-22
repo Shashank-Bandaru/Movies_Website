@@ -1,11 +1,11 @@
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #F5F7F9;
+    
 }
 div.top_bar{
         box-sizing: border-box;
         align-items: center ; 
-        justify-content: center;
+        justify-content: end;
         position: absolute;
         width: 100%;
         height: 71px;
@@ -18,6 +18,17 @@ div.top_bar{
         box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.06);
 }
 
+body.dark_mode{
+  background-color: #333;
+}
+
+body.dark_mode .top_bar{
+ background-color: #333;
+}
+
+body.dark_mode .logo{
+  background-color: #333;
+}
  .logo ul{
     display: flex;
     flex-direction: row;
@@ -33,6 +44,12 @@ div.top_bar{
     top: 20%;
     list-style: none;
 }
+
+
+body.dark_mode .logo ul{
+  background-color: #333;
+}
+
 .logo ul li b{
     width: 142.28px;
     height: 22px;
@@ -43,10 +60,104 @@ div.top_bar{
     color: #000000;
     background-color: #FFFFFF;
 }
+body.dark_mode .logo ul li b{
+  color: red;
+    background-color: #333
+}
+
 .logo_img{
     width: 19%;
     height:100%;
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+  width: 69px;
+  height: 34px;
+}
+
+/* Styling for the slider */
+.slider {
+  background-color: #000000;
+  position: absolute;
+  cursor: pointer;
+  top: -4px;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* Styling for the toggle icons */
+.toggle-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-icons i {
+  color: #fff;
+  font-size: 22px;
+  transition: opacity .4s;
+  opacity: 0;
+  padding: 3px 2px;
+}
+
+
+input:not(:checked) + .slider .material-icons:first-child {
+  opacity: 1;
+}
+
+input:not(:checked)+ .slider .material-icons:last-child {
+ opacity: 1;
+ color: rgba(255, 255, 255, 0.823);
+ background-color: #2196F3;
+}
+
+input:checked + .slider .material-icons:last-child {
+  opacity: 1;
+  color: #2196F3;
+}
+input:checked + .slider .material-icons:first-child{
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.823);
+  background-color: #000000;
+}
+
+input:not(:checked)+ .slider {
+  background-color: #2196F3;
+}
+
+input:not(:checked) + .slider:before {
+  transform: translateX(26px);
+}
+
+.material-icons.yellow{
+  color: yellow;
+  background-color: #2196F3;
+}
+
+.material-icons.gray{
+  color: white;
+  background: #000000;
+}
+
+
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+ 
+}
+
 #form{
     display: flex;
     flex-direction: row;
@@ -118,6 +229,13 @@ input::placeholder{
     color: #000000;
   }
 
+  body.dark_mode .side_bar{
+    background-color: #363636;
+  }
+
+  body.dark_mode .side_bar a{
+    color: #2196F3;
+  }
   nav.menu{
     display: flex;
     flex-direction: column;
@@ -142,6 +260,10 @@ input::placeholder{
     align-items: center;
     padding: 12px 24px;
     gap: 10px;
+ }
+
+ body.dark_mode  nav.menu div.menu_op{
+  color: #2196F3;
  }
 
  nav.menu div.menu_op:hover{
@@ -197,7 +319,9 @@ input::placeholder{
     grid-row-gap: 0px ;
     grid-auto-rows: 1fr;
   }
-  
+ body.dark_mode .error{
+  color: #fff;
+ }
   #container .movie-item img{
     width: 100%;
     height: 112%;
@@ -225,15 +349,14 @@ input::placeholder{
   }
 
   .movie-item strong {
-    width: 100%;
-    height: 45px;
-    margin: 0px auto;
-    box-sizing: border-box;
-    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin: -38px auto;
+    padding: 7px 12px;
     font-style: normal ;
     font-size: 2.66vmin;
-    position: absolute;
-    background-color: transparent;
+    position: absolute; 
+    background-color:rgba(0, 0, 0, 0.7) ;
     color: white;
     font-weight:1000 ;
     bottom: 17px;
@@ -307,7 +430,7 @@ input::placeholder{
     top : 12px;
   }
 
-  #input_area{
+  #form{
      position: static;
      height : 40%;
      width : 50%; 

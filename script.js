@@ -28,7 +28,7 @@ async function getMovies(url){
 function showMovies(data){
         container.innerHTML=``;
         if(data.length==0){
-         container.innerHTML = `<div ><h1>OOPS - ERROR : 404  </h2>
+         container.innerHTML = `<div class="error"><h1>OOPS - ERROR : 404  </h2>
          <p style="font size : 1.9em;">The searched movie cannot be found please enter a valid movie name.</p></div>`
         }else{
      data.forEach(movie => {
@@ -88,3 +88,56 @@ btn.addEventListener("click",(event)=>
         getMovies(API_URL);
      }
 });
+
+function toggleDarkMode(isDarkMode) {
+   const body = document.body;
+   if (isDarkMode) {
+     body.classList.add('dark_mode');
+   } else {
+     body.classList.remove('dark_mode');
+   }
+ }
+ // Function to toggle the dark mode
+function toggleDarkMode(isDarkMode) {
+   const body = document.body;
+   if (isDarkMode) {
+     body.classList.add('dark_mode');
+   } else {
+     body.classList.remove('dark_mode');
+   }
+ }
+ 
+ // Function to save the user's dark mode preference to local storage
+ function saveDarkModePreference(isDarkMode) {
+   localStorage.setItem('darkMode', isDarkMode);
+ }
+ 
+ // Check if dark mode preference is stored in local storage
+ const storedDarkMode = localStorage.getItem('darkMode');
+ 
+ // Toggle dark mode based on stored preference
+ if (storedDarkMode === 'true') {
+   toggleDarkMode(true);
+   // Set the dark mode toggle switch to 'checked'
+   document.getElementById('darkModeToggle').checked = true;
+ } else if (storedDarkMode === 'false') {
+   toggleDarkMode(false);
+   // Set the dark mode toggle switch to 'unchecked'
+   document.getElementById('darkModeToggle').checked = false;
+ }
+ 
+ // Dark mode toggle event listener
+ const darkModeToggle = document.getElementById('darkModeToggle');
+ darkModeToggle.addEventListener('change', () => {
+   const isDarkMode = darkModeToggle.checked;
+   toggleDarkMode(isDarkMode);
+   saveDarkModePreference(isDarkMode);
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
