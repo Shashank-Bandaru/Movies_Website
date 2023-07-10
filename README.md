@@ -14,6 +14,14 @@ This project has the following features :
 
 __Note :__ Some extra features can be added to the _side-bar menu_ and to the _+ADD_ button in the future but at present they are only for presentation purpose and they don't have any additional functionality.
 ***
+
+### Demonstration video : 
+
+
+https://github.com/Shashank-Bandaru/Movies_Website/assets/106913883/7a26b27a-89b3-4150-8e03-69c178b57f9e
+
+
+***
 ### Reference : 
 The content for the movies is fetched from the website : 
 https://www.themoviedb.org/
