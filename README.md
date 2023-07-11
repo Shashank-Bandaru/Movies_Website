@@ -2,7 +2,7 @@
 A website that displays basic movies information .
 ***
 ### Motivation : 
-This project is made as a part of the HTML-CSS-JavaScript Workshop.
+This project is made as a part of the HTML-CSS-JavaScript Workshop conducted by the Students Web Committee IIT Guwahati.
 ***
 ### Features : 
 This project has the following features : 
