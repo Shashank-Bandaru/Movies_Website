@@ -89,14 +89,7 @@ btn.addEventListener("click",(event)=>
      }
 });
 
-function toggleDarkMode(isDarkMode) {
-   const body = document.body;
-   if (isDarkMode) {
-     body.classList.add('dark_mode');
-   } else {
-     body.classList.remove('dark_mode');
-   }
- }
+
  // Function to toggle the dark mode
 function toggleDarkMode(isDarkMode) {
    const body = document.body;
